@@ -69,6 +69,39 @@ The server will be running on `http://localhost:3333`.
 
 You can use tools like [Insomnia](https://insomnia.rest/) or [Postman](https://www.postman.com/) to test the API endpoints.
 
+### Testing Routes
+
+1. **Add a New Task**:
+   - **Method**: POST
+   - **Endpoint**: `/tasks`
+   - **Body**:
+     ```json
+     {
+       "title": "Test Task"
+     }
+     ```
+
+2. **List All Tasks**:
+   - **Method**: GET
+   - **Endpoint**: `/tasks`
+
+3. **Update a Task**:
+   - **Method**: PUT
+   - **Endpoint**: `/tasks/:taskId` (Replace `:taskId` with the actual ID of the task you want to update.)
+   - **Body**:
+     ```json
+     {
+       "title": "Updated Task",
+       "completed": true
+     }
+     ```
+
+4. **Delete a Task**:
+   - **Method**: DELETE
+   - **Endpoint**: `/tasks/:taskId` (Replace `:taskId` with the actual ID of the task you want to delete.)
+
+You can use these JSON examples as a reference when testing your routes in Insomnia or Postman. Make sure to replace placeholders like `:taskId` with actual values when testing.
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
